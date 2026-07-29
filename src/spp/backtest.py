@@ -23,6 +23,7 @@ from nautilus_trader.model.enums import AccountType
 from nautilus_trader.model.enums import OmsType
 from nautilus_trader.model.objects import Money
 
+from spp.data import load_bars
 from spp.instruments import GLBX
 from spp.instruments import cme_equity_future
 from spp.strategy import HaramiInsideBarMTF
@@ -40,6 +41,10 @@ def build_engine(
     log_level: str,
     adaptive_bar_ordering: bool = True,
     drift_scale: float = 0.15,
+    min_trend_separation_atr: float = 0.25,
+    csv_path: str | None = None,
+    csv_timezone: str | None = None,
+    price_scale: float = 1.0,
 ) -> BacktestEngine:
     engine = BacktestEngine(
         config=BacktestEngineConfig(
@@ -80,14 +85,25 @@ def build_engine(
         f"{instrument.id}-60-MINUTE-LAST-INTERNAL@5-MINUTE-EXTERNAL",
     )
 
-    bars = generate_bars(
-        instrument,
-        signal_bar_type,
-        start=dt.datetime(2026, 1, 5, tzinfo=dt.timezone.utc),
-        days=days,
-        seed=seed,
-        drift_scale=drift_scale,
-    )
+    if csv_path is not None:
+        bars, report = load_bars(
+            csv_path,
+            instrument,
+            signal_bar_type,
+            timezone=csv_timezone,
+            price_scale=price_scale,
+        )
+        print("=== Data quality ===")
+        print(report.render())
+    else:
+        bars = generate_bars(
+            instrument,
+            signal_bar_type,
+            start=dt.datetime(2026, 1, 5, tzinfo=dt.timezone.utc),
+            days=days,
+            seed=seed,
+            drift_scale=drift_scale,
+        )
     engine.add_data(bars)
 
     engine.add_strategy(
@@ -97,6 +113,7 @@ def build_engine(
                 signal_bar_type=signal_bar_type,
                 context_bar_type=context_bar_type,
                 risk_per_trade=risk_per_trade,
+                min_trend_separation_atr=min_trend_separation_atr,
             ),
         ),
     )
@@ -112,10 +129,33 @@ def main() -> None:
     parser.add_argument("--risk", type=Decimal, default=Decimal("250"))
     parser.add_argument("--log-level", default="WARNING")
     parser.add_argument(
+        "--csv",
+        help="Load real 5-minute bars from a CSV/Parquet file instead of generating "
+             "them. This is the only mode whose results mean anything.",
+    )
+    parser.add_argument(
+        "--csv-tz",
+        help="IANA timezone of the file's timestamps, required when they are naive "
+             "(e.g. 'UTC' or 'America/Chicago').",
+    )
+    parser.add_argument(
+        "--price-scale",
+        type=float,
+        default=1.0,
+        help="Multiplier for price columns; pass 1e-9 for Databento DBN fixed-point.",
+    )
+    parser.add_argument(
         "--optimistic-fills",
         action="store_true",
         help="Walk bars Open-High-Low-Close regardless of shape. Included only to "
              "show how much this assumption flatters results; do not trust it.",
+    )
+    parser.add_argument(
+        "--trend-sep",
+        type=float,
+        default=0.25,
+        help="Context EMA separation required to call a trend, in multiples of the "
+             "context ATR. 0.0 disables the filter (direction only).",
     )
     parser.add_argument(
         "--no-drift",
@@ -134,6 +174,10 @@ def main() -> None:
         log_level=args.log_level,
         adaptive_bar_ordering=not args.optimistic_fills,
         drift_scale=0.0 if args.no_drift else 0.15,
+        min_trend_separation_atr=args.trend_sep,
+        csv_path=args.csv,
+        csv_timezone=args.csv_tz,
+        price_scale=args.price_scale,
     )
     engine.run()
 
@@ -160,12 +204,13 @@ def main() -> None:
     if not account.empty:
         print(f"  Ending balance      {account['total'].iloc[-1]} USD")
 
-    print(
-        "\nNOTE: this is synthetic data. Unless --no-drift was passed it contains "
-        "trending regimes by construction, which a breakout strategy will find -- "
-        "so a profit here measures the generator, not the market. These numbers "
-        "confirm the mechanics work, nothing more.",
-    )
+    if args.csv is None:
+        print(
+            "\nNOTE: this is synthetic data. Unless --no-drift was passed it contains "
+            "trending regimes by construction, which a breakout strategy will find -- "
+            "so a profit here measures the generator, not the market. These numbers "
+            "confirm the mechanics work, nothing more.",
+        )
     engine.dispose()
 
 

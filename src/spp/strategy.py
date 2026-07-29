@@ -73,6 +73,14 @@ class HaramiInsideBarMTFConfig(StrategyConfig, frozen=True):
         Require a harami's own bias to agree with the higher-timeframe trend.
     fast_ema_period, slow_ema_period : int
         Trend definition on the context timeframe.
+    min_trend_separation_atr : float
+        Require the context EMAs to be at least this multiple of the context
+        timeframe's ATR apart before calling a trend. Two moving averages are
+        essentially never exactly equal, so without this the context timeframe
+        only assigns a direction -- it never actually filters, and the strategy
+        happily trades breakouts into a flat, chopping market. Raise it to trade
+        only pronounced trends; set it to 0.0 to restore direction-only
+        behaviour.
     atr_period : int
         ATR period on the signal timeframe.
     risk_per_trade : Decimal
@@ -110,6 +118,7 @@ class HaramiInsideBarMTFConfig(StrategyConfig, frozen=True):
 
     fast_ema_period: int = 10
     slow_ema_period: int = 30
+    min_trend_separation_atr: float = 0.25
     atr_period: int = 14
 
     risk_per_trade: Decimal = Decimal("250")
@@ -136,6 +145,9 @@ class HaramiInsideBarMTF(Strategy):
         self.atr = AverageTrueRange(config.atr_period)
         self.fast_ema = ExponentialMovingAverage(config.fast_ema_period)
         self.slow_ema = ExponentialMovingAverage(config.slow_ema_period)
+        # Separate ATR on the context timeframe: EMA separation has to be
+        # judged against higher-timeframe volatility, not the signal bars'.
+        self.context_atr = AverageTrueRange(config.atr_period)
 
         self._tz = ZoneInfo(CHICAGO_EQUITY_TZ)
         self._session_start = _parse_hhmm(config.session_start)
@@ -173,6 +185,7 @@ class HaramiInsideBarMTF(Strategy):
         self.register_indicator_for_bars(self.config.signal_bar_type, self.atr)
         self.register_indicator_for_bars(self.config.context_bar_type, self.fast_ema)
         self.register_indicator_for_bars(self.config.context_bar_type, self.slow_ema)
+        self.register_indicator_for_bars(self.config.context_bar_type, self.context_atr)
 
         # Subscribe to the context timeframe first. When it is a composite bar
         # type its aggregator consumes the signal bars, so it must exist before
@@ -197,6 +210,7 @@ class HaramiInsideBarMTF(Strategy):
         self.atr.reset()
         self.fast_ema.reset()
         self.slow_ema.reset()
+        self.context_atr.reset()
         self._prev_bar = None
         self._bars_since_entry_submitted = None
         for key in self.stats:
@@ -274,11 +288,28 @@ class HaramiInsideBarMTF(Strategy):
     # ------------------------------------------------------------------
 
     def _context_trend(self) -> Bias:
+        """
+        Higher-timeframe direction, or ``NEUTRAL`` when there is no clear trend.
+
+        The separation threshold is what makes this a filter rather than just a
+        coin flip: two EMAs are always on one side or the other of each other,
+        so a bare comparison never returns NEUTRAL and never blocks anything.
+        """
         if not (self.fast_ema.initialized and self.slow_ema.initialized):
             return Bias.NEUTRAL
-        if self.fast_ema.value > self.slow_ema.value:
+
+        separation = self.fast_ema.value - self.slow_ema.value
+
+        if self.config.min_trend_separation_atr > 0.0:
+            if not self.context_atr.initialized:
+                return Bias.NEUTRAL
+            threshold = self.config.min_trend_separation_atr * self.context_atr.value
+            if abs(separation) < threshold:
+                return Bias.NEUTRAL
+
+        if separation > 0:
             return Bias.BULLISH
-        if self.fast_ema.value < self.slow_ema.value:
+        if separation < 0:
             return Bias.BEARISH
         return Bias.NEUTRAL
 

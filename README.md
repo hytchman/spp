@@ -56,6 +56,7 @@ requires a harami's bias to agree with the higher-timeframe trend
 | `src/spp/strategy.py` | The strategy: MTF routing, session handling, brackets, sizing. |
 | `src/spp/instruments.py` | CME contract definitions with correct multipliers. |
 | `src/spp/synthetic.py` | Generated bars, so the backtest runs without paid data. |
+| `src/spp/data.py` | Loading and validating real CSV/Parquet bars. |
 | `src/spp/backtest.py` | Runnable backtest with a signal funnel and results summary. |
 
 ## What the backtests actually showed
@@ -113,12 +114,65 @@ trading whichever setups happened to have tight stops. On MES, zero were rejecte
 Run `--symbol ES` and watch `rejected_size_zero` in the funnel. If it is large,
 either your risk budget is too small for the contract or you should be on micros.
 
-### The trend filter never actually blocks a trade
+### A bare EMA cross is not a filter
 
-`rejected_no_trend` is 0 in every run, because a fast/slow EMA relationship is
-essentially never exactly equal. The context timeframe assigns direction; it does
-not filter. If you want it to filter, add a separation threshold (require the EMAs
-to be some ATR multiple apart) or a slope condition.
+Two moving averages are never exactly equal, so comparing them only ever assigns
+a direction — `rejected_no_trend` was 0 in every early run. The strategy was
+happily breaking out into flat, chopping markets and calling it a trend.
+
+`min_trend_separation_atr` (default 0.25) requires the context EMAs to be at
+least that multiple of the hourly ATR apart before a trend is called. Set it to
+0.0 for the old direction-only behaviour:
+
+| `--trend-sep` | rejected | trades | win rate | trending data | driftless data |
+|---:|---:|---:|---:|---:|---:|
+| 0.0 | 0 | 165 | 47.9% | $11,820 | $1,766 |
+| 0.25 | 32 | 159 | 47.8% | $11,556 | $727 |
+| 0.5 | 83 | 145 | 48.3% | $10,701 | −$572 |
+| 1.0 | 200 | 124 | 48.4% | $8,691 | $113 |
+
+Worth reading honestly: tightening the filter barely moves the win rate. It cuts
+exposure rather than improving trade quality, and total P&L falls roughly in
+proportion to the trade count. On this data it is not earning its keep. Whether
+it does on real data is exactly the sort of thing you cannot learn from a
+generator.
+
+## Running on real data
+
+```bash
+python -m spp.backtest --symbol MES --csv bars.csv --csv-tz America/Chicago
+```
+
+The loader takes CSV, gzipped CSV, or Parquet, normalises common column spellings
+(Databento, IB, TradingView), and prints a data quality report before running:
+
+```
+=== Data quality ===
+  rows                 25920
+  range                2026-01-05 00:05:00+00:00  ->  2026-05-09 00:00:00+00:00
+  duplicate timestamps 0
+  out of order         0
+  invalid OHLC         0
+  off-tick prices      0
+  largest gap          2 days 00:05:00
+```
+
+**Naive timestamps are refused rather than guessed.** If a file's timestamps carry
+no offset, you must pass `--csv-tz`. This is deliberate: the strategy's session
+filter is in US Eastern, so a file written in exchange local time but read as UTC
+shifts every bar and silently trades the wrong hours of the day. That produces a
+backtest that looks fine and means nothing. Files with offsets or epoch integers
+need no flag.
+
+Other checks worth knowing about: rows where the high is below the open cannot
+physically exist and are fatal by default (`strict=False` drops them instead —
+Nautilus rejects such a bar at construction either way, so the real choice is
+stopping versus skipping). Off-tick prices — anything not on MES's quarter-point
+grid — are reported but never block, since some vendors publish adjusted prices.
+On a futures contract they usually mean the file is not what you think it is.
+
+For Databento DBN fixed-point prices (integers scaled by 1e9), pass
+`--price-scale 1e-9`.
 
 ## The signal funnel
 
@@ -139,8 +193,8 @@ blind is guesswork:
 
 ## Before trading this with real money
 
-1. **Get real data.** [Databento](https://databento.com) has CME historical bars
-   and a supported Nautilus adapter. Everything above is synthetic.
+1. **Get real data.** [Databento](https://databento.com) has CME historical bars;
+   export 5-minute OHLCV and run with `--csv`. Everything above is synthetic.
 2. **Re-run the fill-ordering comparison on that data.** If the result depends on
    the flag, the result is not real.
 3. **Walk it forward.** Fit parameters on one period, test on a later one you have
