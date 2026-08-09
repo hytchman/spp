@@ -186,7 +186,54 @@ Spend the money and the five months on civil records, translations, the ticket, 
 
 ---
 
-## 9. Open items — things I could not verify
+## 9. Philippines — routing and entry (selected route)
+
+### Fly direct from the US. This is the whole answer.
+
+**Philippine Airlines operates nonstop US–Manila service from New York (JFK), Los Angeles, San Francisco, Seattle and Honolulu**, adding **Chicago O'Hare from 9 November 2026** (3× weekly, Mon/Wed/Fri, already on sale).
+
+A nonstop means **no transit country at all**. Every transit-visa question in §6 — Schengen Type A, Gulf hubs, Japan, Korea — disappears. For a Haitian passport holder this is worth more than any fare saving: the most common failure mode is being denied boarding over a transit rule, and a nonstop makes that structurally impossible.
+
+**Book the nonstop even if it costs several hundred dollars more.** It is the cheapest insurance on this page.
+
+One-stop alternatives if the nonstop doesn't work on price or date: **Turkish TK84 Istanbul–Manila** (nonstop, 4× weekly, 787, ~11h15m) is the best of them — and you're eVisa-eligible for Turkey (90 days in 180) anyway, so an Istanbul connection carries no documentary risk even if you have to clear immigration. Qatar via Doha, Emirates via Dubai and Etihad via Abu Dhabi also serve Manila; confirm their transit rules individually before booking.
+
+### Entry requirements — the one that gets people stopped
+
+| Requirement | Detail |
+|---|---|
+| **Passport validity** | 6+ months beyond stay. Yours runs to 2034 ✓ |
+| **Onward/return ticket** | **Mandatory, and enforced at check-in — not at the border.** Airlines are required to verify a confirmed exit plan before issuing a boarding pass |
+| **eTravel registration** | Free, at `etravel.gov.ph`, within **72 hours** before landing. Replaced paper arrival cards in 2026 |
+| **Proof of funds** | Not always checked; be ready to show ~$50/day for your stay via bank statement, card or cash |
+| **Stay granted** | 30 days on arrival |
+
+**The onward ticket is the thing to get right.** You are flying one-way into a 36-month plan, and the check-in agent in New York will not board you without a ticket out of the Philippines dated within your 30-day entry. Buy a cheap onward flight to Kuala Lumpur, Hong Kong or Singapore before you go to the airport. It is a one-time problem — it applies at boarding, not at each subsequent extension.
+
+### The extension ladder
+
+30 days on arrival → **29-day visa waiver extension** (to 59 days) → rolling **9(a) extensions** in one-, two- or six-month blocks → **36-month cumulative cap** for visa-exempt nationals. Convertible in-country to a **9F student visa**; note that tourist time already used counts against the 36-month cap.
+
+### What the Philippines is and isn't
+
+It is the best **bridge** on the list: no visa, English, ~$900–1,500/month in Cebu, cheap English-taught universities, and three years of legal runway bought one extension at a time.
+
+It is not a **destination**: 9(a) status carries no work rights, and there is no path from it to permanent residence or citizenship. **Keep the Benin application (§3) running in parallel.** The sequence that uses both: land in Manila before 20 January, extend while the nationality decision processes, then fly Manila → Cotonou (via Istanbul, Doha or Addis) to claim it in person inside the three-year certificate window.
+
+### Do not route through Haiti — there is effectively no path
+
+Direct answer to the question: **you cannot sensibly fly Haiti → Philippines, and you should not try.**
+
+- **Port-au-Prince (PAP) is closed to US carriers.** The FAA ban has been extended repeatedly — currently through **7 March 2026** — because armed groups threaten civil aviation. Gangs control roughly 90% of the capital.
+- **Cap-Haïtien (CAP) is now the country's main international gateway**, but it is served by only five airlines — American, Bahamasair, Caicos Express, interCaribbean and Sunrise — flying short-haul only: Miami, Fort Lauderdale, Boston, Newark, Kingston, Turks & Caicos, Nassau, plus Santo Domingo from October 2026. **Nothing from CAP connects toward Asia.**
+- **Every usable onward hub is blocked or gated.** The US options need a US visa you will not hold once you have departed. The non-US options — Santo Domingo, Panama, Kingston — require a Haitian-passport visa each.
+- The only chain that theoretically works is something like **CAP → Santo Domingo or Panama → Bogotá/Panama → Istanbul (Turkish TK800, 3× weekly) → Manila (TK84)**. That is multiple visas, several days, and three separate points where you can be denied boarding.
+
+**The practical conclusion:** the nonstop from New York or Los Angeles is an asset that **expires with your US status**. It exists now and will not exist after 20 January. Fly out of the US directly to Manila — do not build any plan that involves touching Haiti first.
+
+---
+
+## 10. Open items — things I could not verify
 
 - **`myafroorigins.bj` was returning HTTP 503** when I tried to read the official requirements page directly. The figures in §3 come from the legal summaries and a documented applicant account, not the government portal. Confirm the current document list and fee on the portal itself before filing.
 - **Whether the Benin process can be completed entirely from abroad** up to the in-person step — the residence and employment proofs suggested in the document list appear to accept US-based evidence, but I could not confirm this for a non-US-resident applicant.
@@ -194,6 +241,8 @@ Spend the money and the five months on civil records, translations, the ticket, 
 - **Yellow fever entry requirements per country** — flagged from general regional practice, not verified per destination.
 - **Whether prop-firm payout documentation is accepted as source of funds** by any specific consulate. No authority I found addresses trading income directly; the guidance in §5 is extrapolated from general source-of-funds practice.
 - **Cost-of-living figures vary widely between sources**, Dakar most of all ($1,300 vs $2,455/month across two sources). Treat all of §2 as ranges, not quotes.
+- **Whether the FAA's Port-au-Prince ban was extended past 7 March 2026.** It has been extended repeatedly; assume still in force, but confirm if it ever becomes relevant.
+- **Transit rules for Haitian passport holders through Doha, Dubai and Abu Dhabi** for the one-stop Manila alternatives. The nonstop makes this moot, which is why the nonstop is the recommendation.
 - **Rwanda's in-country conversion from visitor status to the N1 student pass** — the 3–4 day processing and one-year validity are confirmed, but the immigration service does not publish the conversion procedure from a visitor visa specifically. Worth an email to the Directorate General of Immigration before relying on it.
 
 ---
