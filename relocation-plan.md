@@ -233,7 +233,79 @@ Direct answer to the question: **you cannot sensibly fly Haiti → Philippines, 
 
 ---
 
-## 10. Open items — things I could not verify
+## 10. Digital nomad visas — the right question, with one structural catch
+
+DNVs are unusually attractive for you because **almost all of them test income or assets, not passport**. Malaysia's DE Rantau is open to every nationality except Israel; Thailand's DTV is open to all nationalities at 20+. For a passport that gets refused on nationality elsewhere, that is a rare piece of level ground.
+
+The catch is not your passport. **It's that prop trading doesn't look like remote work.**
+
+### The structural problem
+
+Most DNVs don't test "do you have money." They test "do you have a remote *job*." Thailand's workcation category wants an employment contract, or client contracts plus invoices, or business registration with revenue proof. Colombia requires foreign-sourced income and does not authorise local work. Mauritius says you may only work for clients abroad. Brazil wants income "from foreign employers, clients, or your own company registered abroad."
+
+A prop trader has **no employer, no clients, and no invoices.** Payouts are a profit share on a funded account, not a fee for services. A consular officer reading that file sees savings, not employment — and the documented rejection pattern is explicit: *"generic portfolio or vague freelance contracts get rejected."*
+
+So the play is to target the visas that test **assets**, and to sidestep the ones that test employment.
+
+### What's actually open to you
+
+| Visa | Test | Bar | Duration | Verdict |
+|---|---|---|---|---|
+| **Thailand DTV — Soft Power** | **Assets + course enrollment** | 500,000 THB (~$14.5k), 3 months seasoned | **5 yrs multi-entry**, 180 days/entry | ★ **Best fit — no employment proof needed** |
+| **Brazil VITEM XIV** | **Assets *or* income** | **$18,000 savings** *or* $1,500/mo | 1 yr + 1 renewal | ★ Genuine savings route |
+| Thailand DTV — Workcation | Assets **+** remote work proof | Same 500k THB, plus contracts | Same | Same visa, harder door |
+| Colombia Type V | Income | $1,435/mo, each of 3 months separately | 2 yrs | Weak fit — needs work income |
+| Mauritius Premium | Income | ~$1,500/mo, free, ~1 week approval | 1 yr renewable | Possible; clients-abroad wording |
+| Namibia | Income | $2,000/mo | 6 months | Short, and income-tested |
+| Malaysia DE Rantau | Income | $24k/yr **tech only** — **$60k/yr non-tech** | 12 mo + 1 renewal | Trading is non-tech → $60k bar |
+| **Philippines DNV** | — | — | — | ✗ **Almost certainly closed to you** |
+| Cape Verde | Income | €1,500/mo | 6 mo + 6 | ✗ Closed now — **but see below** |
+| Seychelles Workcation | — | — | — | ✗ Programme no longer active (June 2026) |
+
+**The Philippines' own DNV won't help you.** Executive Order 86 requires applicants to come from a country that offers a **reciprocal digital nomad visa to Filipino nationals**. Haiti has no DNV, and no official qualifying-country list had been published as of March 2026. Your Philippines plan stays on the 9(a) extension ladder from §9 — which is fine, because that ladder has no funds test at all.
+
+**Cape Verde is worth remembering.** It's restricted to citizens of Europe, North America, the CPLP and **ECOWAS**. Closed to you today — but Benin is an ECOWAS member, so a Beninese passport (§3) opens it. Small thing, but it shows how the nationality play compounds.
+
+### The Thailand DTV Soft Power route — the one to actually chase
+
+This is the finding worth acting on. The DTV has two qualifying doors, and everyone talks about the wrong one.
+
+**Soft Power** requires only:
+1. **500,000 THB (~$14,500)** in your own personal account, seasoned 3 months, and
+2. **Enrollment in a qualifying cultural programme** — Muay Thai at a government-recognised gym, or an accredited Thai cooking school.
+
+That's it. **No employment contract, no clients, no invoices** — the enrollment *is* your qualifying activity. For someone with capital and no employer, this door was built to fit.
+
+Practical notes: the gym or school must be officially recognised, not any gym. Programmes of **6+ months** approve far better; 9–12 months is recommended. You need an acceptance letter, a formal training schedule, and payment receipts — not drop-in classes. **Thai language study does not qualify** — embassies have been instructed to reject it, since it belongs to the ED visa.
+
+Outcome: a **5-year multiple-entry visa**, 180 days per entry, ~$400 fee applying from the US. Compare that to 30 days at a time in Manila.
+
+### The scheduling problem — read this before doing anything
+
+Every asset-tested DNV has the same requirement, and it is the same one from §5: **the money has to have been sitting still.**
+
+Thai embassies scrutinise 3–6 months of transactions specifically for the "parking money" pattern — a large deposit appearing shortly before you apply. One practitioner estimate puts **~70% of DIY DTV rejections down to bank statement problems**: parked money, wrong currency, insufficient history. Colombia requires each of three months to clear the bar independently.
+
+Now do the arithmetic against your timeline. If the trading push starts in August and payouts land September–November, the three-month seasoning clock doesn't finish until **December at the earliest, more likely February**. That is at or past your 20 January wall.
+
+**So: a DNV is not a January visa for you. It is a month-6 visa.** Attempting to force one before departure is how you end up with a rejection on file and no ticket.
+
+### How to sequence it
+
+**Floor (unchanged):** fly nonstop to Manila before 20 January on the 9(a) ladder. No funds test, no seasoning requirement, no consular discretion. This is why the Philippines was the right pick.
+
+**Then, one of two branches:**
+
+- **If the money lands early and seasons by November** — apply for the Thailand DTV from the US in November or December, while you still hold US status and a US consular jurisdiction that will accept you. Best case: you fly to Bangkok on a five-year visa instead of to Manila on thirty days.
+- **Otherwise (the likely case)** — go to Manila, let the balance sit untouched for three to six months while you extend, book a Muay Thai or cooking programme in Thailand, and apply for the DTV from Manila around month four to six. The DTV must be applied for from outside Thailand, and the Philippines qualifies.
+
+⚠️ **One caveat on that second branch:** Thai embassies prioritise applicants resident in their jurisdiction and may ask for proof of legal residence — a residence permit or long-term visa. A Philippine tourist extension may not satisfy that. Confirm with the Royal Thai Embassy in Manila **before** you rely on it; if they decline third-country applicants, the fallback is applying to a post that does, or using Brazil's VITEM XIV instead.
+
+**The through-line across §5, §9 and §10: don't touch the money.** Whatever the trading produces, park it in one personal account and leave it alone. Every asset-tested route you might want — Thailand, Brazil — is unlocked by an untouched balance with history, and destroyed by moving it around.
+
+---
+
+## 11. Open items — things I could not verify
 
 - **`myafroorigins.bj` was returning HTTP 503** when I tried to read the official requirements page directly. The figures in §3 come from the legal summaries and a documented applicant account, not the government portal. Confirm the current document list and fee on the portal itself before filing.
 - **Whether the Benin process can be completed entirely from abroad** up to the in-person step — the residence and employment proofs suggested in the document list appear to accept US-based evidence, but I could not confirm this for a non-US-resident applicant.
@@ -241,6 +313,9 @@ Direct answer to the question: **you cannot sensibly fly Haiti → Philippines, 
 - **Yellow fever entry requirements per country** — flagged from general regional practice, not verified per destination.
 - **Whether prop-firm payout documentation is accepted as source of funds** by any specific consulate. No authority I found addresses trading income directly; the guidance in §5 is extrapolated from general source-of-funds practice.
 - **Cost-of-living figures vary widely between sources**, Dakar most of all ($1,300 vs $2,455/month across two sources). Treat all of §2 as ranges, not quotes.
+- **Whether the Royal Thai Embassy in Manila accepts DTV applications from non-resident third-country nationals** on a tourist extension. This is the hinge of the month-6 branch in §10 — confirm it early, not at month five.
+- **Whether the Philippines has since published its EO 86 reciprocity list.** None existed as of March 2026, and Haiti is very unlikely to appear, but it costs one email to the DFA to check.
+- **Whether any Thai embassy has an explicit position on prop-trading payouts** under the workcation category. My read that it fails the "remote work" test is inference from the published document requirements, not a stated ruling — which is precisely why the Soft Power door is the recommendation.
 - **Whether the FAA's Port-au-Prince ban was extended past 7 March 2026.** It has been extended repeatedly; assume still in force, but confirm if it ever becomes relevant.
 - **Transit rules for Haitian passport holders through Doha, Dubai and Abu Dhabi** for the one-stop Manila alternatives. The nonstop makes this moot, which is why the nonstop is the recommendation.
 - **Rwanda's in-country conversion from visitor status to the N1 student pass** — the 3–4 day processing and one-year validity are confirmed, but the immigration service does not publish the conversion procedure from a visitor visa specifically. Worth an email to the Directorate General of Immigration before relying on it.
