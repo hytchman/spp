@@ -305,7 +305,96 @@ Now do the arithmetic against your timeline. If the trading push starts in Augus
 
 ---
 
-## 11. Open items — things I could not verify
+## 11. Australia and Japan
+
+Neither is a January exit route — both need lead time you no longer have. But **Japan is a genuinely strong year-one target**, and it's reachable *from Manila*. Australia is the weakest option on this page and I'd drop it.
+
+### Japan — the best long-term destination assessed so far
+
+Japan is the only high-income country in this entire document with a **work visa that does not require a degree**.
+
+**The Specified Skilled Worker (SSW) visa** covers 16 labour-shortage sectors — nursing care, agriculture, construction, manufacturing, hospitality — with **no degree and no prior training in Japan required**. You need a sector skills test plus **JLPT N4 or JFT-Basic A2**. That is the whole gate. For someone with a secondary education and a technical certificate, this is the most accessible route into a wealthy economy that exists.
+
+Structure matters here:
+- **SSW Type 1** — 5 years cumulative, no family, requires a registered support organisation, and **time on Type 1 does not count toward permanent residence.**
+- **SSW Type 2** — expanded since August 2023 to nearly all sectors except care work. **Indefinitely renewable, family allowed, and it does count toward PR.**
+
+⚠️ **New CoEs for SSW Type 1 in Food Service were suspended from 13 April 2026** — the sector's 50,000-worker cap for FY2024–2028 was projected to be hit by May 2026. Check current sector caps before committing to a track; caps close without much warning.
+
+**The usual on-ramp is a Japanese language school**, and the numbers are far friendlier than Australia's:
+
+| | |
+|---|---|
+| **Funds required** | ¥2,000,000–2,500,000 for a one-year programme (~$13,000–17,000); ~¥1,500,000 for six months |
+| **Education needed** | 12 years of schooling — **you have this** |
+| **Work rights** | Part-time work permitted with the standard permission endorsement |
+| **COE processing** | 2–3 months, issued ~1 month before arrival |
+| **Apply** | 6–8 months ahead of intake |
+
+⚠️ **New as of 15 April 2026 — and this one is a hard gate.** Student visa applicants entering Japanese language institutions must now demonstrate **A1-level Japanese or above** (≈ **JLPT N5**). Accepted evidence: JLPT, NAT-TEST, J.TEST, BJT or another Immigration Services Agency–approved exam — **or an exam or formal interview conducted by a teacher at the language school itself.** That last option is the practical escape hatch if you can't get a test sitting in time.
+
+Note also that Japan scrutinises **source of funds** hard — immigration wants "a coherent story: salary deposits over time," with third-party sponsors needing tax certificates and proof of relationship. Same seasoning discipline as §5 and §10.
+
+**The timeline, and why it works from Manila:**
+
+April 2027 intake deadlines are **mid-to-late October 2026** — Nihongo Center closes 31 October, KOKO Japan 15 October. That's roughly ten weeks from now.
+
+So the sequence is: **apply to a Japanese language school in September–October 2026 from the US → fly nonstop to Manila before 20 January → COE issued around February → collect the visa at the Japanese Embassy in Manila → enter Japan April 2027.** The three-month gap between your US departure and the Japanese intake is exactly what the Manila 9(a) ladder is for. This is the strongest use of the bridge I've found.
+
+### Australia — I'd drop it
+
+| Requirement | Reality |
+|---|---|
+| Living-cost funds | **AUD 29,710** (up from 24,505), on top of tuition and OSHC — realistically **AUD 45,000–55,000** demonstrable |
+| English | IELTS **6.0 overall, no band below 5.5** — and **online/at-home test variants are explicitly not accepted** |
+| Genuine Student test | Replaced GTE in March 2024, assessed inside the application |
+| Evidence Level | High-risk profiles get **manual verification of everything** — 3–6 months of bank history, authenticated transcripts, verification calls to providers, discretionary interviews |
+| Payoff | Post-study 485 for a diploma/trade qualification is **18 months only**, under-35, fee AUD 5,750 |
+
+Australia moved India, Nepal, Bangladesh and Bhutan to Evidence Level 3 in January 2026 citing fraudulent financial documents and falsified transcripts. Haiti's assigned level isn't published, but nothing about the profile suggests lenient treatment.
+
+Put together: roughly **triple Japan's funds bar**, an in-person English test you don't yet have, heavy documentary scrutiny of exactly the money that will look freshly deposited — and eighteen months of work rights at the end of it. **The effort is better spent on Japanese.**
+
+---
+
+## 12. Which online credentials are actually recognised
+
+You asked this earlier and I answered it for the wrong set of destinations. For Benin, Rwanda and Manila, "skip it" was right — none of them gate on credentials. **With Japan in scope that changes: one credential is now a hard entry requirement, not a booster.** Here is the real answer.
+
+**The rule that explains everything below: immigration authorities recognise *accredited qualifications* and *standardised tests*. They do not recognise course-completion certificates.** Udemy is not accredited by any regional, national or international body, and its certificates cannot be used for formal accreditation. The same is true of Coursera and edX certificates of completion, as distinct from actual accredited degrees delivered through those platforms.
+
+### Tier 1 — recognised by immigration. These unlock visas.
+
+| Credential | Unlocks | Notes |
+|---|---|---|
+| **JLPT N5** (or NAT-TEST / J.TEST) | **Japanese language school entry** | **Mandatory since 15 April 2026.** JLPT runs only July and December — **NAT-TEST and J.TEST run far more often**, which matters against an October deadline |
+| **JLPT N4 or JFT-Basic A2** | **Japan SSW work visa** | JFT-Basic is offered frequently at registered centres, unlike JLPT's twice-yearly schedule |
+| **SSW sector skills test** | Japan SSW work visa | No degree required |
+| **IELTS / PTE / TOEFL iBT** | Australia, Canada, UK | **Must be sat in person** — at-home variants rejected. Study online, test in a centre |
+
+### Tier 2 — recognised by employers. These get you hired, not admitted.
+
+CompTIA A+ / Network+ / Security+, AWS Cloud Practitioner and Solutions Architect Associate, Cisco CCNA, Microsoft certifications. All online-proctored, globally portable, roughly **$150–400** each, and genuinely respected by hiring managers. Google Career Certificates (IT Support, Data Analytics, Project Management, UX) sit just below these.
+
+None of them will ever appear on a visa checklist. They earn income once you have status — which is a real thing, just not the thing you asked about.
+
+### Tier 3 — counts for nothing official
+
+Udemy, Coursera and edX completion certificates, LinkedIn Learning. Portfolio signals only. **No immigration authority anywhere counts these toward education requirements, skill levels or points.**
+
+An accredited online bachelor's *would* count — but it takes three to four years, and US DEAC-accredited online degrees have inconsistent recognition with skilled-migration assessment authorities. Not a tool for this window.
+
+### What to actually do between now and January
+
+**Study Japanese to N5 and sit NAT-TEST or J.TEST.** It is the single highest-return thing available to you online, for four reasons: it's cheap; it is a **hard legal gate** rather than a nice-to-have; at N4 the same study track opens the **SSW work visa** — the only realistic non-degree work route into a high-income country in this document; and the Japan Foundation's official **Irodori** and **Marugoto** courses are free online, from the same body that administers JFT-Basic.
+
+Note the deadline interaction: **JLPT's December 2026 sitting returns results too late for an October school deadline.** Use NAT-TEST or J.TEST, or lean on the school's own teacher-conducted interview option.
+
+If you want a second thing, add **one** vendor certification (CompTIA A+ or AWS Cloud Practitioner) for employability. Do not stack MOOC certificates — they will not move any decision that matters here.
+
+---
+
+## 13. Open items — things I could not verify
 
 - **`myafroorigins.bj` was returning HTTP 503** when I tried to read the official requirements page directly. The figures in §3 come from the legal summaries and a documented applicant account, not the government portal. Confirm the current document list and fee on the portal itself before filing.
 - **Whether the Benin process can be completed entirely from abroad** up to the in-person step — the residence and employment proofs suggested in the document list appear to accept US-based evidence, but I could not confirm this for a non-US-resident applicant.
@@ -313,6 +402,10 @@ Now do the arithmetic against your timeline. If the trading push starts in Augus
 - **Yellow fever entry requirements per country** — flagged from general regional practice, not verified per destination.
 - **Whether prop-firm payout documentation is accepted as source of funds** by any specific consulate. No authority I found addresses trading income directly; the guidance in §5 is extrapolated from general source-of-funds practice.
 - **Cost-of-living figures vary widely between sources**, Dakar most of all ($1,300 vs $2,455/month across two sources). Treat all of §2 as ranges, not quotes.
+- **Whether NAT-TEST and J.TEST hold sittings in the US or the Philippines**, and their 2026 dates. Both run more often than JLPT, but I did not verify overseas test-centre locations — check before assuming an October deadline is reachable.
+- **Whether the Japanese Embassy in Manila will issue a student visa on a COE to a Haitian national holding only a Philippine tourist extension.** This is the hinge of the Japan sequence in §11 — confirm before committing to an October school application.
+- **Haiti's assigned Australian student-visa Evidence Level.** Not published; my read that it attracts stringent treatment is inference from the profile, not a stated classification.
+- **Current SSW sector caps.** Food Service was suspended from 13 April 2026; other sectors may follow. Check the Immigration Services Agency before choosing a track.
 - **Whether the Royal Thai Embassy in Manila accepts DTV applications from non-resident third-country nationals** on a tourist extension. This is the hinge of the month-6 branch in §10 — confirm it early, not at month five.
 - **Whether the Philippines has since published its EO 86 reciprocity list.** None existed as of March 2026, and Haiti is very unlikely to appear, but it costs one email to the DFA to check.
 - **Whether any Thai embassy has an explicit position on prop-trading payouts** under the workcation category. My read that it fails the "remote work" test is inference from the published document requirements, not a stated ruling — which is precisely why the Soft Power door is the recommendation.
