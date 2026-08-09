@@ -382,7 +382,18 @@ None of them will ever appear on a visa checklist. They earn income once you hav
 
 Udemy, Coursera and edX completion certificates, LinkedIn Learning. Portfolio signals only. **No immigration authority anywhere counts these toward education requirements, skill levels or points.**
 
-An accredited online bachelor's *would* count — but it takes three to four years, and US DEAC-accredited online degrees have inconsistent recognition with skilled-migration assessment authorities. Not a tool for this window.
+### The distinction that matters: accredited institution vs. platform certificate
+
+It is **not** true that online study can't be accredited. Plenty of it is. The line is not online-vs-in-person — it is **who issues the credential**:
+
+- An **accredited institution** that happens to teach online grants a real degree. It is evaluated and it counts.
+- A **platform** issues a certificate of completion. It is not a qualification and never becomes one.
+
+Concrete example: **University of the People** — fully online and tuition-free apart from assessment fees — was awarded **WSCUC accreditation in February 2025**. WSCUC is US *regional* accreditation, the highest tier, the same body that accredits Berkeley, UCLA and Stanford. It voluntarily ended its older DEAC (national) accreditation on 31 December 2025, which is an upgrade, not a loss.
+
+Degrees from recognised institutions are evaluated for immigration by bodies like **WES**, which is accepted by IRCC in Canada and USCIS in the US — roughly **$186–264**, about 7 days.
+
+So an accredited online bachelor's is real, portable and cheap. It is simply **too slow for this window** — three to four years. That makes it a **year 1–4 project to run from Manila or Japan**, in parallel with everything else, not a January tool. Worth starting once you have landed and the rent is $300.
 
 ### What to actually do between now and January
 
