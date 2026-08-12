@@ -432,7 +432,32 @@ If you want a second thing, add **one** vendor certification (CompTIA A+ or AWS 
 
 ---
 
-## 13. Open items — things I could not verify
+## 13. Shortlist: classes that produce a usable certificate
+
+Ranked by return. Everything here issues a certificate or diploma you can put on an immigration form, a CV, or both.
+
+| # | Credential | Time / cost | Counts for |
+|---|---|---|---|
+| 1 | **NAT-TEST N5 → N4** (Japanese) | 250–400 hrs to N5, ~$50/sitting, free study via Irodori/Marugoto | **Immigration** — hard gate for the Japan student visa (N5) and the SSW work visa (N4) |
+| 2 | **DAEFLE** — Alliance française Paris + CNED | ~11 months at 8 hrs/week, distance | **Both** — accredited French-teaching diploma |
+| 3 | **CompTIA A+** or **Google IT Support Certificate** | 3–6 months, ~$250–500 | **CV / work** only |
+| 4 | **SSW sector skills test** | Weeks–months once in Japan | **Immigration** — the work visa itself |
+
+### The pick: DAEFLE
+
+It is the only genuinely **accredited teaching diploma** you can earn remotely in under a year, and it monetises an asset you already have — native French. Run by the Alliance française de Paris Ile-de-France with CNED, fully distance, roughly 11 months at 8 hours a week, entry by an online access test. Six skill blocks, with up to three years to complete them. The exam runs annually in June — for the 2026 cycle, registration closed 7 May, exams 3–4 June, results 18 September — so **your cycle is June 2027**, sat from Manila.
+
+French teaching is real paid work in Japan, the Philippines and across francophone Africa, and it pairs with the Benin/ECOWAS route rather than competing with it.
+
+### ⚠️ Sector warning if you go the SSW route
+
+**Nursing care is SSW Type 1 only — there is no Type 2 for caregiving.** That means a hard 5-year cap, no family, and **no credit toward permanent residence.** It is the most-advertised sector and the wrong one for you. It also carries an extra care-specific Japanese test (73% pass mark, versus 60% on the skills test).
+
+Choose a **Type 2-eligible** sector instead — construction, manufacturing, building cleaning, automobile maintenance, accommodation, agriculture — where the status renews indefinitely, allows family, and counts toward PR.
+
+---
+
+## 14. Open items — things I could not verify
 
 - **`myafroorigins.bj` was returning HTTP 503** when I tried to read the official requirements page directly. The figures in §3 come from the legal summaries and a documented applicant account, not the government portal. Confirm the current document list and fee on the portal itself before filing.
 - **Whether the Benin process can be completed entirely from abroad** up to the in-person step — the residence and employment proofs suggested in the document list appear to accept US-based evidence, but I could not confirm this for a non-US-resident applicant.
