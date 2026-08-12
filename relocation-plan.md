@@ -457,7 +457,44 @@ Choose a **Type 2-eligible** sector instead — construction, manufacturing, bui
 
 ---
 
-## 14. Open items — things I could not verify
+## 14. Choosing a subject that keeps you off the bottom rung anywhere
+
+The goal here isn't a job. It's a **floor** — a qualification that still means something whether you land in Lagos, Osaka, Toronto, Warsaw or back in the US.
+
+### Why qualified people end up in warehouses
+
+Almost never lack of skill. It's that their credential was **nationally licensed** and didn't transfer. A nurse, electrician, lawyer, teacher or local accountant crossing a border becomes unqualified overnight and takes whatever pays this month.
+
+**So the filter is: is the issuing body the same in every country?** If yes, the certificate is priced the same everywhere. If no, it dies at the border.
+
+**Avoid as a primary credential:** nursing, school teaching, law, medicine, local accountancy, electrician/plumber licensing, real estate, insurance. Every one requires requalification per country.
+
+### The three that genuinely travel
+
+| Credential | Entry | Time / cost | Reach |
+|---|---|---|---|
+| **CompTIA A+ → Network+/Security+ → AWS** | None | 9–15 months · ~$700–900 | Identical worldwide; **remote-capable** |
+| **NEBOSH International General Certificate** | **No entry requirements** | 3–6 months online · £1,200–2,500 | **130+ countries**; mandatory or preferred for HSE roles across the GCC, Africa, Asia and the UK |
+| **ACCA** (via Foundations/FIA) | **No minimum entry requirements** — FIA opens at Class-10 equivalent | First diploma ~9 months; full route 3–4 yrs | Exam centres in **180+ countries**, 7,700+ approved employers |
+
+NEBOSH is the one most people in your position have never heard of and it deserves attention: the "International" in the title is literal — it was built to be country-neutral. Certified holders report **20–40% higher pay than uncertified peers** in comparable roles, and 35–55% in the Gulf. No degree, no prerequisites, three to six months.
+
+### The actual answer: stack two, not one
+
+Your constraint isn't skill — it's **work rights**. On a Japanese SSW visa you're capped inside a designated sector. In Europe or Canada without status you can't take a skilled job at all. A single credential leaves you exposed whenever the visa is the binding constraint.
+
+So carry one of each:
+
+- **One remote-capable credential — IT/cloud.** It pays *even when local work rights don't exist*. This is the one that keeps you out of the warehouse during the gaps, and it doubles as the qualifying remote income that digital nomad visas demand (§10).
+- **One on-site credential — NEBOSH IGC.** It pays well *the moment work rights do exist*, in construction, oil and gas, manufacturing and logistics, across exactly the regions your passport can reach.
+
+Between them there is no country and no visa state where your floor is unskilled work. That is the whole objective.
+
+**Sequence:** CompTIA A+ first — cheapest, fastest, proves the pattern. NEBOSH second, once income allows the £1,200+. ACCA only if you find you like the accounting work; it's the highest ceiling but the longest road.
+
+---
+
+## 15. Open items — things I could not verify
 
 - **`myafroorigins.bj` was returning HTTP 503** when I tried to read the official requirements page directly. The figures in §3 come from the legal summaries and a documented applicant account, not the government portal. Confirm the current document list and fee on the portal itself before filing.
 - **Whether the Benin process can be completed entirely from abroad** up to the in-person step — the residence and employment proofs suggested in the document list appear to accept US-based evidence, but I could not confirm this for a non-US-resident applicant.
