@@ -492,6 +492,38 @@ Between them there is no country and no visa state where your floor is unskilled
 
 **Sequence:** CompTIA A+ first — cheapest, fastest, proves the pattern. NEBOSH second, once income allows the £1,200+. ACCA only if you find you like the accounting work; it's the highest ceiling but the longest road.
 
+### But the phrase "without a degree" is the tell
+
+Everything above is engineered around a constraint that is **removable**. A degree is the clear-cut solution, and the certificates are the bridge to it — not a substitute for it.
+
+**What a degree unlocks that no certification ever will:**
+
+1. **Points in immigration systems.** Canada's Express Entry treats education as a core CRS factor; Australia's points test scores it; Japan's Highly Skilled Professional system scores it. Certifications score **zero** in all of them.
+2. **Entire visa categories that are closed without it** — EU Blue Card, UK Skilled Worker for most roles, US H-1B, Canada's Federal Skilled Worker.
+3. **For you specifically, the Japan upgrade.** The **Engineer/Specialist in Humanities/International Services** visa requires a bachelor's — and it is a different life from SSW:
+
+| | SSW Type 1 | Engineer/Specialist |
+|---|---|---|
+| Sector | Locked to one designated sector | Any matching role |
+| Duration | **5 years hard cap** | Renewable indefinitely |
+| Family | **Not allowed** | Allowed |
+| Counts toward PR | **No** | Yes |
+
+Foreign degrees are accepted for it provided they are **genuine four-year bachelor's programmes** with **a direct connection to the job**. (Degree-free alternatives exist — a Japanese vocational school 専門士, or 10 years' practical experience, or 3 years for International Services only — but those are far slower routes to the same place.)
+
+⚠️ Note a rule effective **15 April 2026**: applicants hired by Category 3/4 employers into customer-facing roles that mainly use language ability must also show **CEFR B2** — JLPT N2 or above. Another reason the Japanese study track compounds.
+
+**The cost is the surprising part.** University of the People — **WSCUC-accredited** since February 2025 — runs roughly **$3,500–4,900 total** for a full bachelor's, entirely online. That is the cheapest legitimate accredited US bachelor's in existence, and being online is exactly what you need: it follows you from Manila to Tokyo to anywhere without transferring or restarting.
+
+**Choose the major deliberately.** Japan requires a direct connection between degree and job, so **Computer Science** (pairs with the CompTIA/AWS track) or **Business Administration** (pairs with ACCA). Not something generic.
+
+### So the real structure
+
+- **Certificates = the bridge.** Fast, cheap, they pay rent within months and keep you off the bottom rung while the slow thing cooks.
+- **Degree = the destination.** Slow and cheap. Start it now precisely *because* it takes 3–4 years — that clock should already be running.
+
+Run both at once. They don't compete for the same hours in any serious way, and in four years you would hold a CS degree, AWS certifications, and JLPT N2 — which is a Japan Engineer visa, or a competitive Express Entry profile, rather than another visa that expires.
+
 ---
 
 ## 15. Open items — things I could not verify
@@ -503,6 +535,8 @@ Between them there is no country and no visa state where your floor is unskilled
 - **Whether prop-firm payout documentation is accepted as source of funds** by any specific consulate. No authority I found addresses trading income directly; the guidance in §5 is extrapolated from general source-of-funds practice.
 - **Cost-of-living figures vary widely between sources**, Dakar most of all ($1,300 vs $2,455/month across two sources). Treat all of §2 as ranges, not quotes.
 - ~~Whether NAT-TEST holds sittings in the Philippines~~ — **resolved: it runs every two months at all official Philippine centres**, registration closing 4–5 weeks ahead. Specific 2027 dates still need checking. US sittings unverified but no longer needed under the revised July-2027 plan.
+- **Whether Japan's Immigration Services Agency accepts a *fully online* foreign bachelor's** for the Engineer/Specialist visa. Foreign four-year degrees are accepted in general, but I found no explicit ruling on online-only delivery. Confirm before betting four years on it.
+- **Whether WES currently evaluates University of the People** for a Canadian ECA. Indications are yes, but my source was a discussion forum — verify against WES's own required-documents database directly.
 - **Whether the Japanese Embassy in Manila will issue a student visa on a COE to a Haitian national holding only a Philippine tourist extension.** This is the hinge of the whole Japan sequence in §11 — confirm early, though the July-2027 target leaves far more room to find an alternative if the answer is no.
 - **Haiti's assigned Australian student-visa Evidence Level.** Not published; my read that it attracts stringent treatment is inference from the profile, not a stated classification.
 - **Current SSW sector caps.** Food Service was suspended from 13 April 2026; other sectors may follow. Check the Immigration Services Agency before choosing a track.
