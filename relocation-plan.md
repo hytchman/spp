@@ -174,7 +174,7 @@ Spend the money and the five months on civil records, translations, the ticket, 
 
 | When | Do |
 |---|---|
-| **This week (10–16 Aug)** | Start Haitian civil records: your own *acte de naissance*, parents', grandparents' — targeting an ancestor born before 1944. This is the long pole; everything else waits on it. Order the fingerprint background check the same day. |
+| **This week (10–16 Aug)** | **Consolidated Haiti document request** — civil records (self, parents, grandparents, targeting a pre-1944 ancestor) **and** high school diploma + transcript, in one push. This is the long pole for both the Benin nationality (§3) and the degree (§15); everything else waits on it. Order the fingerprint background check and book the Duolingo English Test the same day. |
 | **Late Aug** | Get French translations quoted and started. Begin the prop-firm push — **August start, not October**, so the balance has time to season. |
 | **By mid-Sept** | **File the Benin application.** Absolute latest to file and still clear a 3-month review before departure is mid-October; do not use that buffer. Book the yellow fever shot. |
 | **Sept–Oct** | Choose the bridge destination (Rwanda / Senegal / Benin / Philippines) and hold a ticket on a **non-Schengen routing**. If you're also going for Colombia's DNV, your three clean months of bank statements must start now. |
@@ -526,7 +526,63 @@ Run both at once. They don't compete for the same hours in any serious way, and 
 
 ---
 
-## 15. Open items — things I could not verify
+## 15. Degree: the enrolment plan
+
+**Decision: BS in Computer Science, University of the People.** Start now, from the US.
+
+### Why now, and not after you land
+
+UoPeople is the **only item in this entire plan that is unaffected by your location or your visa status.** No consulate, no funds test, no residence requirement, no transfer when you move. It runs in the background from the US, through Manila, into Japan, without interruption.
+
+And it runs **five terms a year**, each about eight to nine weeks — so entry comes around roughly every two months rather than once each September. There is no reason to wait, and one strong reason not to: the four-year clock should already be running.
+
+### The numbers
+
+| | |
+|---|---|
+| **Admission policy** | Open, non-competitive. No SAT, no GPA threshold |
+| **Academic requirement** | **High school diploma** — that's the whole bar. Age 16+ |
+| **Application fee** | $60 |
+| **Ongoing cost** | ~$1,575/year net average → roughly **$3,500–4,900 for the full bachelor's** |
+| **Term length** | ~8–9 weeks, five per year |
+
+### Two gates — one easy, one is the same old problem
+
+**Gate 1 — English proficiency. Easy.** Your schooling was in French and Creole, so you must prove English. UoPeople accepts **Duolingo**, Accuplacer, CEFR, IELTS Academic (6.0), TOEFL iBT (61), PTE, MET, ECCE and EIKEN.
+
+→ **Take the Duolingo English Test.** It's about $65, sat at home, results in roughly 48 hours. Unlike the Australian student visa in §11 — which rejects at-home tests outright — a university admission office accepts them. Do not book an IELTS sitting for this; it's slower and several times the price.
+
+**Gate 2 — your Haitian high school diploma and transcript.** This is the same wall as the Benin civil records, and it is the long pole again.
+
+⚠️ **Consolidate the Haiti request. One push, this week.** You now need two sets of documents out of the same country under the same difficult conditions:
+
+1. **Civil records** — your own *acte de naissance*, plus parents' and grandparents', reaching a pre-1944 ancestor → **Benin nationality (§3)**
+2. **High school diploma + transcript** → **UoPeople admission**
+
+Ordering these separately means paying twice, waiting twice, and doubling the chance one arrives too late. Brief one relative or *fondé de pouvoir* in Haiti on the complete list at once.
+
+### Why Computer Science specifically
+
+- Satisfies Japan's **degree-to-job connection** requirement for the Engineer/Specialist visa, for any IT role
+- Stacks with the CompTIA → AWS track, so coursework and certifications reinforce each other
+- **Remote-work capable**, which is the property that keeps paying when local work rights don't exist — and produces the contracts and invoices that digital nomad visas demand (§10)
+
+Business Administration is the alternative if accounting appeals and you'd rather pair with ACCA. Do not pick Health Science — it points back toward nursing care, which is SSW Type 1 only (§13).
+
+### Sequence
+
+| When | Action |
+|---|---|
+| **This week** | Consolidated Haiti document request (civil records **and** school records). Book the Duolingo English Test |
+| **Within ~2 weeks** | Duolingo results back. Pay the $60 application |
+| **Next available term** | Enrol. Terms open roughly every two months — take the first one you can |
+| **Ongoing** | 1–2 courses per term. It continues untouched through the January flight and everything after |
+
+The degree is the slowest thing on this page, which is exactly why it starts first. Everything else — the trading, Benin, the ticket, Japanese — is measured in months. This one is measured in years, so the only variable you control is when the clock starts.
+
+---
+
+## 16. Open items — things I could not verify
 
 - **`myafroorigins.bj` was returning HTTP 503** when I tried to read the official requirements page directly. The figures in §3 come from the legal summaries and a documented applicant account, not the government portal. Confirm the current document list and fee on the portal itself before filing.
 - **Whether the Benin process can be completed entirely from abroad** up to the in-person step — the residence and employment proofs suggested in the document list appear to accept US-based evidence, but I could not confirm this for a non-US-resident applicant.
