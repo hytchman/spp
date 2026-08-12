@@ -395,11 +395,38 @@ Degrees from recognised institutions are evaluated for immigration by bodies lik
 
 So an accredited online bachelor's is real, portable and cheap. It is simply **too slow for this window** — three to four years. That makes it a **year 1–4 project to run from Manila or Japan**, in parallel with everything else, not a January tool. Worth starting once you have landed and the rent is $300.
 
+### Is there a worthwhile online course of six months or less?
+
+**No — not a *course*. But yes, a six-month online *study project*, aimed at a test.**
+
+There is no accredited academic qualification obtainable online in six months. Accredited credentials are degrees and diplomas measured in years. That part is simply true and there's no clever way around it.
+
+But the framing is wrong. **The thing worth six months of online study is Japanese, and the output is a score report rather than a certificate.** A course certificate is worthless to an immigration officer; a NAT-TEST score is a visa key. Same six months, completely different value.
+
+The other legitimate ≤6-month online items are **vendor certifications** — CompTIA A+ (~2–3 months), AWS Cloud Practitioner (~1–2 months). They earn income; they never appear on a visa checklist.
+
+### ⚠️ The hours don't fit October — target July 2027 instead
+
+This is worth correcting before you commit to a school deadline.
+
+The canonical Japan Foundation range for **JLPT N5 from a non-kanji-background** is **250–400 hours**. At 10 hours a week that's **6–10 months**. From mid-August to a late-October school deadline is about **ten weeks** — which would mean **25–40 hours a week of Japanese** while simultaneously running 25–40 prop accounts. That is not going to happen, and planning as if it will is how both things fail.
+
+**So don't chase the April 2027 intake. Target July 2027.** The gain is large and the cost is nearly nothing:
+
+- It removes the October crunch entirely, so August–December stays focused on the money, the Benin filing, and getting out of the US cleanly.
+- You study Japanese properly in Manila at 15–20 hours a week, where living costs are low and nothing competes for your attention.
+- **NAT-TEST runs every two months in the Philippines** at all official centres, with registration closing 4–5 weeks ahead. You do not need a US sitting at all — which also retires one of the open questions below.
+- You apply to the school **with N5 already in hand** rather than leaning on the teacher-interview escape hatch.
+
+Revised sequence: land Manila in January → study January–April → sit NAT-TEST in Manila → apply around March–April for the **July or October 2027 intake** → enter Japan mid-to-late 2027. The Philippines' 36-month ladder absorbs all of this comfortably.
+
+For reference, **N4** — the SSW work-visa gate — is **450–800 hours from zero**, so roughly another 200–400 hours past N5. That is a 2027 project, pursued from inside Japan on the student visa, not something to attempt now.
+
 ### What to actually do between now and January
 
-**Study Japanese to N5 and sit NAT-TEST or J.TEST.** It is the single highest-return thing available to you online, for four reasons: it's cheap; it is a **hard legal gate** rather than a nice-to-have; at N4 the same study track opens the **SSW work visa** — the only realistic non-degree work route into a high-income country in this document; and the Japan Foundation's official **Irodori** and **Marugoto** courses are free online, from the same body that administers JFT-Basic.
+**Start Japanese now, but at a sustainable 5–8 hours a week — not a sprint.** August to December belongs to the trading push, the Benin filing and the exit. Japanese is the background task in that period and becomes the main task in Manila.
 
-Note the deadline interaction: **JLPT's December 2026 sitting returns results too late for an October school deadline.** Use NAT-TEST or J.TEST, or lean on the school's own teacher-conducted interview option.
+It is still the single highest-return thing available to you online: it's cheap; it is a **hard legal gate** rather than a nice-to-have; at N4 the same study track opens the **SSW work visa** — the only realistic non-degree route into a high-income economy in this document; and the Japan Foundation's official **Irodori** and **Marugoto** courses are free online, from the same body that administers JFT-Basic.
 
 If you want a second thing, add **one** vendor certification (CompTIA A+ or AWS Cloud Practitioner) for employability. Do not stack MOOC certificates — they will not move any decision that matters here.
 
@@ -413,8 +440,8 @@ If you want a second thing, add **one** vendor certification (CompTIA A+ or AWS 
 - **Yellow fever entry requirements per country** — flagged from general regional practice, not verified per destination.
 - **Whether prop-firm payout documentation is accepted as source of funds** by any specific consulate. No authority I found addresses trading income directly; the guidance in §5 is extrapolated from general source-of-funds practice.
 - **Cost-of-living figures vary widely between sources**, Dakar most of all ($1,300 vs $2,455/month across two sources). Treat all of §2 as ranges, not quotes.
-- **Whether NAT-TEST and J.TEST hold sittings in the US or the Philippines**, and their 2026 dates. Both run more often than JLPT, but I did not verify overseas test-centre locations — check before assuming an October deadline is reachable.
-- **Whether the Japanese Embassy in Manila will issue a student visa on a COE to a Haitian national holding only a Philippine tourist extension.** This is the hinge of the Japan sequence in §11 — confirm before committing to an October school application.
+- ~~Whether NAT-TEST holds sittings in the Philippines~~ — **resolved: it runs every two months at all official Philippine centres**, registration closing 4–5 weeks ahead. Specific 2027 dates still need checking. US sittings unverified but no longer needed under the revised July-2027 plan.
+- **Whether the Japanese Embassy in Manila will issue a student visa on a COE to a Haitian national holding only a Philippine tourist extension.** This is the hinge of the whole Japan sequence in §11 — confirm early, though the July-2027 target leaves far more room to find an alternative if the answer is no.
 - **Haiti's assigned Australian student-visa Evidence Level.** Not published; my read that it attracts stringent treatment is inference from the profile, not a stated classification.
 - **Current SSW sector caps.** Food Service was suspended from 13 April 2026; other sectors may follow. Check the Immigration Services Agency before choosing a track.
 - **Whether the Royal Thai Embassy in Manila accepts DTV applications from non-resident third-country nationals** on a tourist extension. This is the hinge of the month-6 branch in §10 — confirm it early, not at month five.
