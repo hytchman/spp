@@ -1,5 +1,5 @@
 //@version=6
-indicator("Position Size Box", "SizeBox", overlay = true, calc_on_every_tick = true)
+indicator("Position Size Box", "SizeBox", overlay = true)
 
 // ─────────────────────────────────────────────────────────────
 //  Position Size Box
