@@ -1,0 +1,89 @@
+//@version=6
+indicator("Position Size Box", "SizeBox", overlay = true, calc_on_every_tick = true)
+
+// ─────────────────────────────────────────────────────────────
+//  Position Size Box
+//  Sizes trades off 1 ATR (14, RMA) so that N trades of 1 ATR
+//  each reach the budget, where:
+//    budget   = min(target × consistency%, stop)
+//    N        = ceil(budget / (ATR × pointValue × maxSize))
+//    size     = floor((budget / N) / (ATR × pointValue)), capped at maxSize
+//  Point value comes from the symbol (MNQ = $2/pt), so maxSize
+//  × pointValue is the "×60" from the MNQ examples.
+// ─────────────────────────────────────────────────────────────
+
+// ── Inputs ──
+grpRisk = "Risk"
+maxSize     = input.int(30,     "Max size (contracts)",  minval = 1,               group = grpRisk)
+stopLoss    = input.float(1500, "Stop — max loss ($)",   minval = 1,   step = 50,  group = grpRisk)
+target      = input.float(1500, "Target ($)",            minval = 1,   step = 50,  group = grpRisk)
+consistency = input.float(100,  "Consistency (%)",       minval = 1,   maxval = 100, step = 5, group = grpRisk)
+
+grpAtr = "ATR"
+atrLen     = input.int(14,        "ATR length (RMA)",          minval = 1, group = grpAtr)
+useChartTf = input.bool(true,     "Use chart timeframe",       group = grpAtr)
+fixedTf    = input.timeframe("2", "Fixed ATR timeframe",       group = grpAtr, tooltip = "Used when 'Use chart timeframe' is off, so the size doesn't change when you switch chart TF.")
+
+grpDisp = "Display"
+showDick = input.bool(true,            "Show don't-be-a-dick-for-a-tick (4/5 of trade target)", group = grpDisp)
+showDetail = input.bool(true,          "Show detail rows",   group = grpDisp)
+posOpt   = input.string("Middle right", "Box position",      options = ["Top right", "Middle right", "Bottom right", "Top left", "Middle left", "Bottom left", "Top center", "Bottom center"], group = grpDisp)
+sizeOpt  = input.string("Huge",         "Main number size",  options = ["Large", "Huge"], group = grpDisp)
+
+// ── ATR (14 RMA = ta.atr) ──
+atrChart = ta.atr(atrLen)
+atrFixed = request.security(syminfo.tickerid, fixedTf, ta.atr(atrLen))
+atr = useChartTf ? atrChart : atrFixed
+
+// ── Sizing math ──
+pv = syminfo.pointvalue
+
+effTarget    = target * consistency / 100.0          // consistency scales the target
+budget       = math.min(effTarget, stopLoss)         // tighter of stop / scaled target
+usdPerAtr1   = atr * pv                              // 1 contract moving 1 ATR
+usdPerAtrMax = usdPerAtr1 * maxSize                  // max size moving 1 ATR
+
+nTrades   = na(atr) or usdPerAtrMax <= 0 ? 1 : math.max(1, math.ceil(budget / usdPerAtrMax))
+perTrade  = budget / nTrades
+posSize   = na(atr) or usdPerAtr1 <= 0 ? na : math.max(1, math.min(maxSize, math.floor(perTrade / usdPerAtr1)))
+dick      = perTrade * 4.0 / 5.0                     // don't be a dick for a tick
+riskAtSz  = na(posSize) ? na : posSize * usdPerAtr1  // $ this size makes/loses over 1 ATR
+usingStop = stopLoss < effTarget
+
+// ── Table ──
+pos = switch posOpt
+    "Top right"     => position.top_right
+    "Middle right"  => position.middle_right
+    "Bottom right"  => position.bottom_right
+    "Top left"      => position.top_left
+    "Middle left"   => position.middle_left
+    "Bottom left"   => position.bottom_left
+    "Top center"    => position.top_center
+    => position.bottom_center
+
+mainTxtSize = sizeOpt == "Huge" ? size.huge : size.large
+
+color bg     = color.new(color.gray, 20)
+color bigCol = #9C27B0
+color txtCol = color.white
+color dimCol = color.new(color.white, 25)
+
+var table t = table.new(pos, 2, 6, bgcolor = bg, border_width = 1, border_color = color.new(color.white, 70), frame_width = 2, frame_color = color.new(color.white, 55))
+
+if barstate.islast
+    table.clear(t, 0, 0, 1, 5)
+    // Big headline: the size
+    table.cell(t, 0, 0, na(posSize) ? "…" : str.tostring(posSize), text_color = bigCol, text_size = mainTxtSize, bgcolor = color.new(color.white, 60))
+    table.cell(t, 1, 0, "× " + str.tostring(nTrades) + (nTrades == 1 ? " trade" : " trades"), text_color = txtCol, text_size = size.normal, bgcolor = color.new(color.white, 60))
+    if showDetail
+        table.cell(t, 0, 1, "ATR " + str.tostring(atrLen), text_color = dimCol, text_size = size.small)
+        table.cell(t, 1, 1, str.tostring(atr, format.mintick), text_color = txtCol, text_size = size.small)
+        table.cell(t, 0, 2, "1 ATR @ size", text_color = dimCol, text_size = size.small)
+        table.cell(t, 1, 2, "$" + str.tostring(riskAtSz, "#"), text_color = txtCol, text_size = size.small)
+        table.cell(t, 0, 3, "Trade target", text_color = dimCol, text_size = size.small)
+        table.cell(t, 1, 3, "$" + str.tostring(perTrade, "#"), text_color = txtCol, text_size = size.small)
+        table.cell(t, 0, 4, "Sized off", text_color = dimCol, text_size = size.small)
+        table.cell(t, 1, 4, usingStop ? "STOP $" + str.tostring(stopLoss, "#") : "TARGET $" + str.tostring(effTarget, "#"), text_color = usingStop ? color.orange : color.new(#26A69A, 0), text_size = size.small)
+    if showDick
+        table.cell(t, 0, 5, "Don't be a dick", text_color = dimCol, text_size = size.small)
+        table.cell(t, 1, 5, "$" + str.tostring(dick, "#"), text_color = #FFD54F, text_size = size.small)
