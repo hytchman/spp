@@ -1,0 +1,44 @@
+//@version=6
+indicator("Heikin Ashi Trend Flip Alert", "HA Flip", overlay = true)
+
+// ─────────────────────────────────────────────────────────────
+//  Heikin Ashi Trend Flip Alert
+//  Computes synthetic Heikin Ashi candles from the chart's own
+//  OHLC (works the same whether your chart is showing regular
+//  candles or something else) and fires an alert the moment the
+//  HA candle color flips bull <-> bear, on the chart's timeframe.
+// ─────────────────────────────────────────────────────────────
+
+confirmedOnly = input.bool(true, "Only alert on confirmed bar close", tooltip = "Recommended. HA color can flip mid-bar on a wick and flip back before close — this waits for the bar to actually close before alerting, so you don't get faked out.")
+showHaCandles = input.bool(false, "Plot Heikin Ashi candles on chart", tooltip = "Draws the HA candles so you can visually verify the alerts against what the indicator is actually seeing — independent of whatever candle style your chart is set to.")
+
+// ── Heikin Ashi (standard recursive formula) ──
+var float haOpen = na
+haClose = (open + high + low + close) / 4.0
+haOpen := na(haOpen[1]) ? (open + close) / 2.0 : (haOpen[1] + haClose[1]) / 2.0
+haHigh  = math.max(high, math.max(haOpen, haClose))
+haLow   = math.min(low, math.min(haOpen, haClose))
+
+haBull = haClose >= haOpen
+
+canAlert = confirmedOnly ? barstate.isconfirmed : true
+flipUp   = haBull and not haBull[1] and canAlert
+flipDown = not haBull and haBull[1] and canAlert
+
+// ── Visuals ──
+plotcandle(showHaCandles ? haOpen : na, showHaCandles ? haHigh : na, showHaCandles ? haLow : na, showHaCandles ? haClose : na,
+     title = "Heikin Ashi", color = haBull ? color.lime : color.red, wickcolor = haBull ? color.lime : color.red, bordercolor = haBull ? color.lime : color.red)
+
+bgcolor(showHaCandles ? na : (haBull ? color.new(color.green, 92) : color.new(color.red, 92)), title = "HA trend background")
+
+plotshape(flipUp,   title = "Flip to Bullish", style = shape.triangleup,   location = location.belowbar, color = color.lime, size = size.small)
+plotshape(flipDown, title = "Flip to Bearish", style = shape.triangledown, location = location.abovebar, color = color.red,  size = size.small)
+
+// ── Alerts ──
+alertcondition(flipUp,   title = "HA Flip to Bullish", message = "{{ticker}} Heikin Ashi flipped BULLISH on {{interval}}")
+alertcondition(flipDown, title = "HA Flip to Bearish", message = "{{ticker}} Heikin Ashi flipped BEARISH on {{interval}}")
+
+if flipUp
+    alert("Heikin Ashi flipped BULLISH — " + syminfo.ticker + " " + timeframe.period, alert.freq_once_per_bar_close)
+if flipDown
+    alert("Heikin Ashi flipped BEARISH — " + syminfo.ticker + " " + timeframe.period, alert.freq_once_per_bar_close)

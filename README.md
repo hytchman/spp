@@ -28,3 +28,29 @@ contract size for the next trade — updated live from ATR(14, RMA).
 
 Max size, stop ($), target ($), consistency (%), ATR length, ATR timeframe
 (chart or fixed), box position, and display toggles.
+
+## Heikin Ashi Trend Flip Alert (`ha-trend-flip-alert.pine`)
+
+TradingView indicator (Pine v6) that computes synthetic Heikin Ashi candles
+from the chart's own OHLC — independent of whatever candle style the chart is
+actually displaying — and alerts the instant the HA color flips bull ↔ bear,
+on the chart's timeframe.
+
+**Install:** TradingView → Pine Editor → paste the file → Add to chart →
+right-click the indicator → Add Alert, choose "HA Flip to Bullish" /
+"HA Flip to Bearish" (or "Any alert() function call" to get both from one
+alert).
+
+### Logic
+
+- Standard recursive HA formula: `haClose = (O+H+L+C)/4`,
+  `haOpen = (prevHaOpen + prevHaClose)/2` (seeded with `(O+C)/2` on bar 1).
+- Bull when `haClose >= haOpen`; flip = bull/bear state changes from the
+  previous bar.
+- **Confirmed-bar-close gate (on by default):** HA color can flip mid-bar on
+  a wick and flip back before the bar closes. With the gate on, the alert
+  only fires once `barstate.isconfirmed` is true, so you don't get faked out
+  by an intrabar wick.
+- Optional toggle to plot the HA candles directly on the chart, so you can
+  visually check the alerts against what the indicator is actually seeing —
+  useful since your chart itself may be showing regular candles.
